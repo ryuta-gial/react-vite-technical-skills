@@ -1,0 +1,16 @@
+FROM node:18.12.0-buster-slim
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y procps
+RUN apt-get install -y xdg-utils
+
+COPY ./package.json ./yarn.lock ./
+COPY ./tsconfig.json ./
+# COPY package*.json ./
+RUN  yarn config set network-timeout 300000
+RUN yarn 
+# RUN npm i
+
+COPY . .
+CMD ["yarn", "dev"]
+#CMD ["npm", "run", "start"]

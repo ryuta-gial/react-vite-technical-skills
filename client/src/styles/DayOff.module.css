@@ -1,0 +1,8 @@
+.calendar th,
+td {
+  border: solid 1px; /* 枠線指定 */
+}
+
+.button {
+  min-width: 14px;
+}

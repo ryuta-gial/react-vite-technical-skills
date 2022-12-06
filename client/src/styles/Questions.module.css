@@ -1,0 +1,13 @@
+.content {
+  padding: 26px;
+  font-size: 1rem;
+  /* padding: 0.5em 5em;
+    margin: 0.5em; */
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.content p {
+  margin: 0;
+  padding: 0;
+}

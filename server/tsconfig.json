@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        // 使うJSのバージョン
+        "target": "ES2019",
+
+        // flatの定義があるライブラリを指定
+        "lib": ["es2019.array", "DOM"],
+        "module": "commonjs",
+        "sourceMap": true,
+        //tsxファイルをjsxやjsにコンパイルする際の出力の形式を指定する。
+        "jsx": "react",
+
+        //このオプションをtrueにすると、下記のオプションが全てtrueになる。
+        // --noImplicitAny
+        // --noImplicitThis
+        // --alwaysStrict
+        // --strictBindCallApply
+        // --strictNullChecks
+        // --strictFunctionTypes
+        // --strictPropertyInitialization
+        "strict": true,
+
+        //tscのモジュール解決の方法を指定する。
+        "moduleResolution": "node",
+
+        //jsonファイルから型解決した状態で値を取得できる
+        "resolveJsonModule": true,
+
+        //デフォルトのエクスポートなしでモジュールからのデフォルトのインポートを許可します
+        "allowSyntheticDefaultImports": true,
+
+        //デフォルトインポートするため
+        "esModuleInterop": true,
+        //型チェックをスキップしない
+        "skipLibCheck": false,
+
+        //何もimport、exportしていないファイルは、エラーが出ます。
+        // "isolatedModules": true,
+
+        //case文にエラーがある場合エラーがでる
+        "noFallthroughCasesInSwitch": true,
+        //import時にファイルパスの文字列で大文字小文字を区別するかどうかを指定する。
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": "./",
+        "outDir": "./dist",
+        "paths": {
+            "*": ["@types/*"]
+        }
+    },
+    "include": ["./src/**/*"]
+}
